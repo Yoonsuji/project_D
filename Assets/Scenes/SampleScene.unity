@@ -1838,6 +1838,67 @@ Transform:
   m_Father: {fileID: 1534753761}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1323684515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1323684517}
+  - component: {fileID: 1323684516}
+  m_Layer: 0
+  m_Name: Emeny_SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1323684516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323684515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dabea9f6f79de4cb5346d41598ec61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPosition: {fileID: 1554349245}
+  enemy:
+  - {fileID: 237567536429048964, guid: 068ce3e19c83c4b9cb33d9973952d622, type: 3}
+  - {fileID: 3671022009787552655, guid: 989ee924982594a748b41d56bdc61473, type: 3}
+  - {fileID: 6198282042775486887, guid: d6e697a19afa749ff96b2b5a81dbcd26, type: 3}
+  - {fileID: 7154700476304014582, guid: 25c5c0dfe589a4611951bbaaeee802a6, type: 3}
+  - {fileID: 8821041145975681684, guid: 2cfa571d1bf6b4ccab86e724a5a014b9, type: 3}
+  - {fileID: 7680944903839310635, guid: c92909c5faa3d4adda6528162810c6ef, type: 3}
+  - {fileID: 777685619393480124, guid: 5cfe1e03dc9984df39e3f7b924daddcf, type: 3}
+  - {fileID: 4692612057742464454, guid: bff924a40e8ba41f5a582243adc3a962, type: 3}
+  - {fileID: 6754446678692195979, guid: 87b6fe54fd8c94643aa3c878aedbb4ec, type: 3}
+  - {fileID: 6313888290563817257, guid: 3059b3bf65aaf49f6b2b329892a643a3, type: 3}
+  - {fileID: 2588158073143125866, guid: 53f0ba1cd318042cd9bbb5c4440875f8, type: 3}
+  - {fileID: 365336979924729683, guid: ef330185f93464021881922caa6eec91, type: 3}
+  - {fileID: 2306834059925559378, guid: f5ca85e04d76f420f8220a07d0f1d282, type: 3}
+  enemySpline: {fileID: 1818320158}
+  moveSpeed: 1
+--- !u!4 &1323684517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323684515}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369442665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2481,6 +2542,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1536339672}
   m_CullTransparentMesh: 1
+--- !u!1 &1554349245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1554349246}
+  m_Layer: 0
+  m_Name: Emeny_SpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1554349246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554349245}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.56, y: -0.060000002, z: 0}
+  m_LocalScale: {x: 5.7143755, y: 1.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1643778012
 GameObject:
   m_ObjectHideFlags: 0
@@ -2986,7 +3078,7 @@ GameObject:
   - component: {fileID: 1818320159}
   - component: {fileID: 1818320158}
   m_Layer: 0
-  m_Name: Spline
+  m_Name: Emeny_Spline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
