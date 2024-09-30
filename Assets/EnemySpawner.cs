@@ -9,6 +9,10 @@ public class EnemySpawner : MonoBehaviour
     public GameObject[] enemy;
     public SplineComputer enemySpline;
     public float moveSpeed = 5f;
+    public int maxEnemyCount = 0;
+    public float spawnTime = 3f;
+
+    private int currentEnemyCount = 0;
 
     void Start()
     {
@@ -17,14 +21,15 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnEnemy()
     {
-        while (true)
+        while (currentEnemyCount < maxEnemyCount)
         {
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(spawnTime);
             int index = Random.Range(0, enemy.Length);
 
             GameObject spawnedEnemy = Instantiate(enemy[index], spawnPosition.transform.position, Quaternion.identity);
 
             StartCoroutine(MoveAlongSpline(spawnedEnemy));
+            currentEnemyCount++;
         }
     }
 
