@@ -12,6 +12,9 @@ public class EnemySpawner : MonoBehaviour
     public int maxEnemyCount = 0;
     public float spawnTime = 3f;
 
+    Animator ani;
+    Rigidbody2D rig;
+
     private int currentEnemyCount = 0;
 
     void Start()
@@ -36,6 +39,7 @@ public class EnemySpawner : MonoBehaviour
     IEnumerator MoveAlongSpline(GameObject enemy)
     {
         int pointCount = enemySpline.pointCount;
+        
 
         for (int i = 0; i < pointCount - 1; i++)
         {
@@ -47,7 +51,7 @@ public class EnemySpawner : MonoBehaviour
             while (t < 1f)
             {
                 t += Time.deltaTime * moveSpeed / Vector3.Distance(startPosition, endPosition);
-
+                ani = enemy.GetComponent<Animator>();
                 enemy.transform.position = Vector3.Lerp(startPosition, endPosition, t);
                 yield return null;
             }
