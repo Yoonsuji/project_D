@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78b4d6e8e6a47842a2bc5cf0e39475f, type: 3}
+  m_Name: 03_TankerEnemy
+  m_EditorClassIdentifier: 
+  enemyName: Tanker
+  maxhealth: 0
+  attackDamage: 5
+  attackRange: 0
+  type: 2
+  moveSpeed: 0
+  attackCooldown: 0
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 0
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

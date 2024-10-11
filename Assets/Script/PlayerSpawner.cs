@@ -9,42 +9,41 @@ public class PlayerSpawner : MonoBehaviour
 {
     public GameObject[] playerSoldier;
     public SplineComputer playerSpline;
-    public float moveSpeed = 5f;
+    public LayerMask collisionLayers;
 
     IEnumerator SpawnPlayer(int index)
     {
-        if(index < 0 || index >= playerSoldier.Length)
+        if (index < 0 || index >= playerSoldier.Length)
         {
             yield break;
         }
-
         GameObject spawnedPlayer = Instantiate(playerSoldier[index], playerSpline.GetPointPosition(0), Quaternion.identity);
-
-        StartCoroutine(MoveAlongSpline(spawnedPlayer));
-
+        UnitMovement movement = spawnedPlayer.AddComponent<UnitMovement>();
+        movement.spline = playerSpline;
+        movement.collisionLayers = collisionLayers;
         yield return null;
     }
 
-    IEnumerator MoveAlongSpline(GameObject player)
-    {
-        int pointCount = playerSpline.pointCount;
-
-        for (int i = 0; i < pointCount - 1; i++)
-        {
-            Vector3 startPosition = playerSpline.GetPointPosition(i);
-            Vector3 endPosition = playerSpline.GetPointPosition(i + 1);
-
-            float t = 0f;
-
-            while (t < 1f)
-            {
-                t += Time.deltaTime * moveSpeed / Vector3.Distance(startPosition, endPosition);
-
-                player.transform.position = Vector3.Lerp(startPosition, endPosition, t);
-                yield return null;
-            }
-        }
-    }
+    //IEnumerator MoveAlongSpline(GameObject player)
+    //{
+    //    int pointCount = playerSpline.pointCount;
+    //
+    //    for (int i = 0; i < pointCount - 1; i++)
+    //    {
+    //        Vector3 startPosition = playerSpline.GetPointPosition(i);
+    //        Vector3 endPosition = playerSpline.GetPointPosition(i + 1);
+    //
+    //        float t = 0f;
+    //
+    //        while (t < 1f)
+    //        {
+    //            t += Time.deltaTime * moveSpeed / Vector3.Distance(startPosition, endPosition);
+    //
+    //            player.transform.position = Vector3.Lerp(startPosition, endPosition, t);
+    //            yield return null;
+    //        }
+    //    }
+    //}
 
     public void SoldierButton0()
     {
