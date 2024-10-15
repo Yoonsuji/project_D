@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 04_FlyingEnemy
   m_EditorClassIdentifier: 
   enemyName: FlyingEnemy
-  health: 10
+  maxhealth: 0
   attackDamage: 3
+  attackRange: 4
+  type: 3
+  moveSpeed: 0
+  attackCooldown: 3
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 0
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

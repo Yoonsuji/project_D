@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 07_StealthyEnemy
   m_EditorClassIdentifier: 
   enemyName: StealthyEnemy
-  health: 7
+  maxhealth: 7
   attackDamage: 4
+  attackRange: 0
+  type: 6
+  moveSpeed: 1
+  attackCooldown: 2
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 0
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 02_FastEnemy
   m_EditorClassIdentifier: 
   enemyName: FastEnemy
-  maxhealth: 0
-  attackDamage: 2
-  attackRange: 0
+  maxhealth: 3
+  attackDamage: 1
+  attackRange: 1
   type: 1
-  moveSpeed: 0
-  attackCooldown: 0
+  moveSpeed: 4
+  attackCooldown: 2
   specialAbilityCooldown: 0
   specialAbilityDuration: 0
   healAmount: 0

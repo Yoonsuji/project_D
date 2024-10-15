@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 06_SniperEnemy
   m_EditorClassIdentifier: 
   enemyName: SniperEnemy
-  health: 8
+  maxhealth: 8
   attackDamage: 12
+  attackRange: 0
+  type: 5
+  moveSpeed: 1
+  attackCooldown: 3
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 0
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

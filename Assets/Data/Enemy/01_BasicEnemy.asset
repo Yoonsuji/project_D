@@ -15,10 +15,10 @@ MonoBehaviour:
   enemyName: BasicEnemy
   maxhealth: 5
   attackDamage: 2
-  attackRange: 0
+  attackRange: 1
   type: 0
-  moveSpeed: 0
-  attackCooldown: 0
+  moveSpeed: 1
+  attackCooldown: 2
   specialAbilityCooldown: 0
   specialAbilityDuration: 0
   healAmount: 0

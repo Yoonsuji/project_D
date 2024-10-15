@@ -2639,18 +2639,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 11400000, guid: 47aecf46aae60ca44bf0d3438ef74a66, type: 2}
-  players:
-  - {fileID: 5288619684843783442, guid: 32c8243237a4a49218e9c765396dc384, type: 3}
-  - {fileID: 473383029601493893, guid: 945d6fbbe984647ad8c42f440b36e57b, type: 3}
-  - {fileID: 4073200344395200376, guid: 39c3141d7326c41ffab4af1fef36af2a, type: 3}
-  - {fileID: 5869541130073751363, guid: 7c2fa53bb9af445c8bd6e17fcd48f532, type: 3}
-  - {fileID: 4396153468119527906, guid: c734732335e7d4f5bac755f5fca34c7c, type: 3}
-  - {fileID: 4713476301919201301, guid: 844274ca572374f548e3f997237f97d9, type: 3}
-  - {fileID: 5991675829638024816, guid: a978dce54fd304c219c420183a49d8fc, type: 3}
-  - {fileID: 4167426177469401274, guid: e53b2f2485d524020b377af3481a6c2b, type: 3}
-  - {fileID: 1213982635612128474, guid: b9cc5906a72b344599a6111ad64f7856, type: 3}
-  - {fileID: 2460470856312276949, guid: a93724b3dcf134e3aa8950823969b709, type: 3}
-  - {fileID: 3298830792811744210, guid: 4ee7b8193bedb458bbb7710d55f55cb3, type: 3}
   detectionRadius: 1
 --- !u!1 &4692612057747427536
 GameObject:

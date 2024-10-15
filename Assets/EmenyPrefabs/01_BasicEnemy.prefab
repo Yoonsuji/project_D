@@ -125,7 +125,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5176769206505446562}
-  - component: {fileID: 6830803180619717687}
   - component: {fileID: 4505897908883655291}
   - component: {fileID: -46256761542487963}
   - component: {fileID: -7007479778820517450}
@@ -158,25 +157,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &6830803180619717687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237567536429048964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ac21711b0ec40a0812d33a586eb7ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _version: 131
-  _spriteOBj: {fileID: 7324376474570296416}
-  EditChk: 0
-  _code: Unit17
-  _anim: {fileID: 1900610699469823383}
-  _horse: 0
-  _horseString: 
 --- !u!70 &4505897908883655291
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -224,7 +204,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.0001
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -252,19 +232,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyStats: {fileID: 11400000, guid: 47aecf46aae60ca44bf0d3438ef74a66, type: 2}
-  players:
-  - {fileID: 5288619684843783442, guid: 32c8243237a4a49218e9c765396dc384, type: 3}
-  - {fileID: 473383029601493893, guid: 945d6fbbe984647ad8c42f440b36e57b, type: 3}
-  - {fileID: 4073200344395200376, guid: 39c3141d7326c41ffab4af1fef36af2a, type: 3}
-  - {fileID: 5869541130073751363, guid: 7c2fa53bb9af445c8bd6e17fcd48f532, type: 3}
-  - {fileID: 4396153468119527906, guid: c734732335e7d4f5bac755f5fca34c7c, type: 3}
-  - {fileID: 4713476301919201301, guid: 844274ca572374f548e3f997237f97d9, type: 3}
-  - {fileID: 5991675829638024816, guid: a978dce54fd304c219c420183a49d8fc, type: 3}
-  - {fileID: 4167426177469401274, guid: e53b2f2485d524020b377af3481a6c2b, type: 3}
-  - {fileID: 1213982635612128474, guid: b9cc5906a72b344599a6111ad64f7856, type: 3}
-  - {fileID: 2460470856312276949, guid: a93724b3dcf134e3aa8950823969b709, type: 3}
-  - {fileID: 3298830792811744210, guid: 4ee7b8193bedb458bbb7710d55f55cb3, type: 3}
-  detectionRadius: 1
+  detectionRadius: 0.5
+  players: []
 --- !u!1 &432444474734426312
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,6 +4242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1956535505907623049}
   - component: {fileID: 4130446814815046130}
+  - component: {fileID: 7105634078377289150}
   m_Layer: 5
   m_Name: HPBar
   m_TagString: Untagged
@@ -4354,3 +4324,16 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7105634078377289150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132593370535702401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa00b91216e6f945b79926abd8ab057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 4130446814815046130}

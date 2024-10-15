@@ -1,18 +1,32 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
+using Dreamteck.Splines;
 
-public class BasicEnemy : MonoBehaviour
+public class TankerEnemy : MonoBehaviour
 {
     public EnemyStats enemyStats;
     public float detectionRadius = 5f;
     public List<Transform> players;
     private float nextAttackTime = 0f;
+
+    private UnitMovement unitMovement;
+
     Animator animator;
+
     private void Start()
     {
         FindPlayers();
-        animator = gameObject.GetComponentInChildren<Animator>();
+
+        unitMovement = GetComponent<UnitMovement>();
+
+        if (unitMovement == null)
+        {
+            unitMovement = gameObject.AddComponent<UnitMovement>();
+        }
+
+        unitMovement.moveSpeed = enemyStats.moveSpeed;
+
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -30,8 +44,15 @@ public class BasicEnemy : MonoBehaviour
             {
                 AttackPlayer(closestPlayer);
             }
+            else
+            {
+                unitMovement.ResumeMovement();
+            }
         }
-       
+        else
+        {
+            unitMovement.ResumeMovement();
+        }
     }
 
     private void FindPlayers()
@@ -55,7 +76,6 @@ public class BasicEnemy : MonoBehaviour
                 players.RemoveAt(i);
                 continue;
             }
-
             float distanceToPlayer = Vector3.Distance(transform.position, players[i].position);
             if (distanceToPlayer < closestDistance)
             {
@@ -75,8 +95,9 @@ public class BasicEnemy : MonoBehaviour
             {
                 playerComponent.TakeDamage(enemyStats.attackDamage);
                 animator.SetTrigger("Attack");
-                Debug.Log($"{enemyStats.enemyName} attacked {player.name} for {enemyStats.attackDamage} damage!");
                 nextAttackTime = Time.time + enemyStats.attackCooldown;
+
+                unitMovement.isMoving = false;
             }
         }
     }

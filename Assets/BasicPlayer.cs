@@ -1,27 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class BasicPlayer : MonoBehaviour
 {
-    public PlayerStats playerStats;
+    [SerializeField]
+    private PlayerStats playerStats;
     public int currentHealth;
-    private HPbar healthBar;
+    public Slider healthSlider;
 
-    void Start()
+    private void Start()
     {
-        currentHealth = playerStats.health;
+        gameObject.tag = "Player";
 
-        healthBar.SetMaxHealth(playerStats.health);
-        healthBar.SetHealth(currentHealth);
+        currentHealth = playerStats.health;
+        healthSlider.maxValue = playerStats.health;
+        healthSlider.value = currentHealth;
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        currentHealth = Mathf.Max(currentHealth, 0);
+        playerStats.health = currentHealth;
         Debug.Log("Player takes " + damage + " damage. Current health: " + currentHealth);
-
-        healthBar.SetHealth(currentHealth);
+        healthSlider.value = currentHealth;
 
         if (currentHealth <= 0)
         {
@@ -29,9 +32,9 @@ public class BasicPlayer : MonoBehaviour
         }
     }
 
-    void Die()
+    private void Die()
     {
-        Debug.Log("Player died!");
-        Destroy(gameObject);
+        Debug.Log("died");
+        gameObject.SetActive(false);
     }
 }

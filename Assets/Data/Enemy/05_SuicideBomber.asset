@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 05_SuicideBomber
   m_EditorClassIdentifier: 
   enemyName: SuicideBomber
-  health: 5
-  attackDamage: 10
+  maxhealth: 5
+  attackDamage: 0
+  attackRange: 0
+  type: 4
+  moveSpeed: 5
+  attackCooldown: 0
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 0
+  explosionDamage: 10
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

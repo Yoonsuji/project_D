@@ -1,13 +1,15 @@
+using Dreamteck.Splines.Primitives;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
 
-public class BasicEnemy : MonoBehaviour
+public class SniperEnemy : MonoBehaviour
 {
     public EnemyStats enemyStats;
     public float detectionRadius = 5f;
     public List<Transform> players;
     private float nextAttackTime = 0f;
+    public GameObject bulletPrefab;
     Animator animator;
     private void Start()
     {
@@ -31,7 +33,7 @@ public class BasicEnemy : MonoBehaviour
                 AttackPlayer(closestPlayer);
             }
         }
-       
+
     }
 
     private void FindPlayers()
@@ -70,14 +72,22 @@ public class BasicEnemy : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
-            if (playerComponent != null)
+            if (bulletPrefab != null)
             {
-                playerComponent.TakeDamage(enemyStats.attackDamage);
-                animator.SetTrigger("Attack");
-                Debug.Log($"{enemyStats.enemyName} attacked {player.name} for {enemyStats.attackDamage} damage!");
-                nextAttackTime = Time.time + enemyStats.attackCooldown;
+                GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+                Vector3 direction = (player.position - transform.position).normalized;
+                float bulletSpeed = 5f;
+                Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
+                animator.SetFloat("AttackState", 0.5f);
+                animator.SetBool("Attack", true);
+                if (bulletRb != null)
+                {
+                    bulletRb.velocity = direction * bulletSpeed;
+                    bulletRb.gravityScale = 0;
+                }
+
             }
+            nextAttackTime = Time.time + enemyStats.attackCooldown;
         }
     }
 
@@ -85,5 +95,17 @@ public class BasicEnemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
+    }
+
+    public void DamageBullet(Transform player)
+    {
+        if (Time.time >= nextAttackTime)
+        {
+            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
+            if (playerComponent != null)
+            {
+                playerComponent.TakeDamage(enemyStats.attackDamage);
+            }
+        }
     }
 }
