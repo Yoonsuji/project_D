@@ -2909,9 +2909,10 @@ GameObject:
   - component: {fileID: 6152292645157523083}
   - component: {fileID: -2447249483804951605}
   - component: {fileID: 4448091452159777824}
+  - component: {fileID: 6782097850495957937}
   m_Layer: 6
   m_Name: 06_SniperEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3034,6 +3035,21 @@ MonoBehaviour:
   detectionRadius: 5
   players: []
   bulletPrefab: {fileID: 986872694805867919, guid: cb5ebd3314824ed48bca19060e43f700, type: 3}
+--- !u!114 &6782097850495957937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6198282042775486887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdd1e0bb3feb6549a39b4ff2032dcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 0}
+  hpBarSlider: {fileID: 0}
+  currentHealth: 0
 --- !u!1 &6373447158117170618
 GameObject:
   m_ObjectHideFlags: 0

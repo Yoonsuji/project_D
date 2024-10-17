@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 13_PoisonAttackEnemy
   m_EditorClassIdentifier: 
   enemyName: PoisonAttackEnemy
-  health: 10
+  maxhealth: 10
   attackDamage: 5
+  attackRange: 0
+  type: 12
+  moveSpeed: 0
+  attackCooldown: 5
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 0
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

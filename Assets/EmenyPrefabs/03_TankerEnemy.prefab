@@ -4050,9 +4050,10 @@ GameObject:
   - component: {fileID: 7010053458159054545}
   - component: {fileID: -6573150141620285273}
   - component: {fileID: 6305991335024116939}
+  - component: {fileID: -1089018178415510435}
   m_Layer: 6
   m_Name: 03_TankerEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4175,6 +4176,21 @@ MonoBehaviour:
   enemyStats: {fileID: 11400000, guid: 8a19c160204961246bce940147a1403a, type: 2}
   detectionRadius: 0.5
   players: []
+--- !u!114 &-1089018178415510435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8821041145975681684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdd1e0bb3feb6549a39b4ff2032dcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 11400000, guid: 8a19c160204961246bce940147a1403a, type: 2}
+  hpBarSlider: {fileID: 2611005411392011840}
+  currentHealth: 0
 --- !u!1 &9123573280697268385
 GameObject:
   m_ObjectHideFlags: 0

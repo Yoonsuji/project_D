@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 19_ StaminaSharingEnemy
   m_EditorClassIdentifier: 
   enemyName: StaminaSharingEnemy
-  health: 10
+  maxhealth: 10
   attackDamage: 3
+  attackRange: 0
+  type: 18
+  moveSpeed: 1
+  attackCooldown: 5
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 1
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

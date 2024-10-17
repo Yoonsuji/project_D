@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 11_SummonerEnemy
   m_EditorClassIdentifier: 
   enemyName: SummonerEnemy
-  health: 10
+  maxhealth: 10
   attackDamage: 2
+  attackRange: 1
+  type: 10
+  moveSpeed: 0.5
+  attackCooldown: 3
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 0
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

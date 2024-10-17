@@ -888,9 +888,10 @@ GameObject:
   - component: {fileID: 5135974217012734708}
   - component: {fileID: -4163988886945713137}
   - component: {fileID: -3383038659694471607}
+  - component: {fileID: -4913420330955235843}
   m_Layer: 6
   m_Name: 07_StealthyEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -910,7 +911,7 @@ RectTransform:
   - {fileID: 4482971427970638386}
   - {fileID: 4199229266734610943}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1013,6 +1014,21 @@ MonoBehaviour:
   enemyStats: {fileID: 11400000, guid: e888887d02385754ea9f0da2a8b30694, type: 2}
   detectionRadius: 0.5
   players: []
+--- !u!114 &-4913420330955235843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3671022009787552655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdd1e0bb3feb6549a39b4ff2032dcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 0}
+  hpBarSlider: {fileID: 0}
+  currentHealth: 0
 --- !u!1 &3892733719581006266
 GameObject:
   m_ObjectHideFlags: 0
@@ -3793,7 +3809,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1137842350037202086
 MonoBehaviour:
   m_ObjectHideFlags: 0

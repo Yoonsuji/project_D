@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 08_WizardEnemy
   m_EditorClassIdentifier: 
   enemyName: WizardEnemy
-  health: 15
+  maxhealth: 15
   attackDamage: 8
+  attackRange: 2
+  type: 7
+  moveSpeed: 1
+  attackCooldown: 3
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 0
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

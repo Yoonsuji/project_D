@@ -7,4 +7,6 @@ public class PlayerStats : ScriptableObject
     public int health;
     public int attackDamage;
     public int manaAmount;
+    public float attackCooldown;
+    public float moveSpeed;
 }

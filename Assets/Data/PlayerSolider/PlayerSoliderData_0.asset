@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: PlayerSoliderData_0
   m_EditorClassIdentifier: 
   PlayerName: PlayerSolider0
-  health: 0
-  attackDamage: 2
+  health: 5
+  attackDamage: 3
   manaAmount: 3
+  attackCooldown: 2
+  moveSpeed: 1

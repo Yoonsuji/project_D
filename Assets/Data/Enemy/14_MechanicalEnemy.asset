@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 14_MechanicalEnemy
   m_EditorClassIdentifier: 
   enemyName: MechanicalEnemy
-  health: 25
+  maxhealth: 25
   attackDamage: 6
+  attackRange: 0
+  type: 13
+  moveSpeed: 1
+  attackCooldown: 5
+  specialAbilityCooldown: 0
+  specialAbilityDuration: 0
+  healAmount: 0
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

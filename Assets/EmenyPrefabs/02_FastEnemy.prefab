@@ -129,9 +129,10 @@ GameObject:
   - component: {fileID: 4505897908883655291}
   - component: {fileID: 6395154255644063177}
   - component: {fileID: -3853826442809099590}
+  - component: {fileID: 1183374487429311347}
   m_Layer: 6
   m_Name: 02_FastEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +152,7 @@ RectTransform:
   - {fileID: 1119324518295917881}
   - {fileID: 7315609105885693791}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -254,6 +255,21 @@ MonoBehaviour:
   enemyStats: {fileID: 11400000, guid: 2ee70c81c16fdf444ba6de9deb9dc863, type: 2}
   detectionRadius: 0.5
   players: []
+--- !u!114 &1183374487429311347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237567536429048964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdd1e0bb3feb6549a39b4ff2032dcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 11400000, guid: 2ee70c81c16fdf444ba6de9deb9dc863, type: 2}
+  hpBarSlider: {fileID: 7829077289652618780}
+  currentHealth: 0
 --- !u!1 &293495110571925703
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,7 +3466,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4990542432692641202
 MonoBehaviour:
   m_ObjectHideFlags: 0

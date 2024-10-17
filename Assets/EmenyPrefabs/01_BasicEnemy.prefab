@@ -128,9 +128,10 @@ GameObject:
   - component: {fileID: 4505897908883655291}
   - component: {fileID: -46256761542487963}
   - component: {fileID: -7007479778820517450}
+  - component: {fileID: -4499167787024622755}
   m_Layer: 6
   m_Name: 01_BasicEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -234,6 +235,21 @@ MonoBehaviour:
   enemyStats: {fileID: 11400000, guid: 47aecf46aae60ca44bf0d3438ef74a66, type: 2}
   detectionRadius: 0.5
   players: []
+--- !u!114 &-4499167787024622755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237567536429048964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdd1e0bb3feb6549a39b4ff2032dcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 11400000, guid: 47aecf46aae60ca44bf0d3438ef74a66, type: 2}
+  hpBarSlider: {fileID: 4130446814815046130}
+  currentHealth: 0
 --- !u!1 &432444474734426312
 GameObject:
   m_ObjectHideFlags: 0
@@ -4242,7 +4258,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1956535505907623049}
   - component: {fileID: 4130446814815046130}
-  - component: {fileID: 7105634078377289150}
   m_Layer: 5
   m_Name: HPBar
   m_TagString: Untagged
@@ -4324,16 +4339,3 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7105634078377289150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9132593370535702401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fa00b91216e6f945b79926abd8ab057, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 4130446814815046130}

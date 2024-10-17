@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 10_HealingEnemy
   m_EditorClassIdentifier: 
   enemyName: HealingEnemy
-  health: 15
-  attackDamage: 4
+  maxhealth: 15
+  attackDamage: 1
+  attackRange: 0
+  type: 9
+  moveSpeed: 0.5
+  attackCooldown: 2
+  specialAbilityCooldown: 2
+  specialAbilityDuration: 0
+  healAmount: 1
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

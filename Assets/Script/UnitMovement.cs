@@ -26,6 +26,7 @@ public class UnitMovement : MonoBehaviour
         {
             moveSpeed = enemyStats.moveSpeed;
         }
+        isMoving = true;
     }
 
     void Update()

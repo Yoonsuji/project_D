@@ -2598,7 +2598,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &530265911226219160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3635,9 +3635,10 @@ GameObject:
   - component: {fileID: -64158209354930717}
   - component: {fileID: 7421319822084396211}
   - component: {fileID: -7249335841912791037}
+  - component: {fileID: 2765786345788208353}
   m_Layer: 6
   m_Name: 05_SuicideBomber
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3657,7 +3658,7 @@ RectTransform:
   - {fileID: 7375932346137907862}
   - {fileID: 2853723420150616391}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3760,6 +3761,21 @@ MonoBehaviour:
   enemyStats: {fileID: 11400000, guid: ef60ffdbabdf0184fb23e6baf4c9f57d, type: 2}
   explosionScaleMultiplier: 2
   explosionDuration: 0.5
+--- !u!114 &2765786345788208353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7680944903839310635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fdd1e0bb3feb6549a39b4ff2032dcc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyStats: {fileID: 11400000, guid: ef60ffdbabdf0184fb23e6baf4c9f57d, type: 2}
+  hpBarSlider: {fileID: 6794732215326305913}
+  currentHealth: 0
 --- !u!1 &7929055010303466832
 GameObject:
   m_ObjectHideFlags: 0

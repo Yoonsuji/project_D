@@ -13,5 +13,18 @@ MonoBehaviour:
   m_Name: 09_DefensiveEnemy
   m_EditorClassIdentifier: 
   enemyName: DefensiveEnemy
-  health: 20
+  maxhealth: 20
   attackDamage: 3
+  attackRange: 0
+  type: 8
+  moveSpeed: 0.7
+  attackCooldown: 2
+  specialAbilityCooldown: 5
+  specialAbilityDuration: 3
+  healAmount: 0
+  explosionDamage: 0
+  poisonDamage: 0
+  poisonDuration: 0
+  mutationTime: 0
+  reinforcementBonus: 0
+  undergroundSpeed: 0

@@ -9,18 +9,17 @@ public class StealthyEnemy : MonoBehaviour
     public List<Transform> players;
     private float nextAttackTime = 0f;
     private Animator animator;
-    private SpriteRenderer[] enemySpriteRenderers; // Array of all SpriteRenderers in this object and children
-    private bool isStealthed = false; // Track stealth state
+    private SpriteRenderer[] enemySpriteRenderers;
+    private bool isStealthed = false;
 
     private void Start()
     {
         FindPlayers();
         animator = gameObject.GetComponentInChildren<Animator>();
 
-        // Get all SpriteRenderers from this object and its children (including grandchildren)
         enemySpriteRenderers = GetComponentsInChildren<SpriteRenderer>();
 
-        StartCoroutine(StealthySkill()); // Start the stealth skill coroutine
+        StartCoroutine(StealthySkill());
     }
 
     private void Update()
@@ -88,19 +87,17 @@ public class StealthyEnemy : MonoBehaviour
         }
     }
 
-    // Stealth skill coroutine: Makes the enemy partially transparent for 1-5 seconds randomly
     private IEnumerator StealthySkill()
     {
-        while (true) // Loop to continuously apply the stealth effect
+        while (true)
         {
-            yield return new WaitForSeconds(Random.Range(1f, 5f)); // Wait for a random interval before turning semi-transparent
+            yield return new WaitForSeconds(Random.Range(1f, 5f));
             if (!isStealthed)
             {
-                // Become semi-transparent
                 StealthOn();
-                float stealthDuration = Random.Range(1f, 5f); // Randomly choose a duration between 1 and 5 seconds
-                yield return new WaitForSeconds(stealthDuration); // Stay semi-transparent for the random duration
-                StealthOff(); // Become fully opaque again
+                float stealthDuration = Random.Range(1f, 5f);
+                yield return new WaitForSeconds(stealthDuration);
+                StealthOff();
             }
         }
     }
@@ -114,14 +111,13 @@ public class StealthyEnemy : MonoBehaviour
             {
                 isStealthed = true;
                 Color color = spriteRenderer.color;
-                color.a = 0.3f; // Set alpha to 30% (partially transparent)
+                color.a = 0.3f;
                 spriteRenderer.color = color;
             }
         }
         Debug.Log($"{enemyStats.enemyName} has become partially transparent!");
     }
 
-    // Makes the enemy fully opaque again
     private void StealthOff()
     {
         foreach (SpriteRenderer spriteRenderer in enemySpriteRenderers)
@@ -130,7 +126,7 @@ public class StealthyEnemy : MonoBehaviour
             {
                 isStealthed = false;
                 Color color = spriteRenderer.color;
-                color.a = 1f; // Set alpha back to 100% (fully opaque)
+                color.a = 1f;
                 spriteRenderer.color = color;
             }
         }

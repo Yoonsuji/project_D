@@ -3875,6 +3875,8 @@ MonoBehaviour:
   playerStats: {fileID: 11400000, guid: bbe1051013c844945899fd3827ca1386, type: 2}
   currentHealth: 0
   healthSlider: {fileID: 2880845891232997587}
+  detectionRadius: 0.5
+  enemies: []
 --- !u!1 &473383029606564906
 GameObject:
   m_ObjectHideFlags: 0
