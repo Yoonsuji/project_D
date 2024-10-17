@@ -23,8 +23,8 @@ MonoBehaviour:
   specialAbilityDuration: 0
   healAmount: 0
   explosionDamage: 0
-  poisonDamage: 0
-  poisonDuration: 0
+  poisonDamage: 5
+  poisonDuration: 2
   mutationTime: 0
   reinforcementBonus: 0
   undergroundSpeed: 0

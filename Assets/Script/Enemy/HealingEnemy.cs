@@ -59,7 +59,7 @@ public class HealingEnemy : MonoBehaviour
             {
                 continue;
             }
-            EnemyBase enemyBase = enemy.GetComponent<EnemyBase>();
+            PlayerBase enemyBase = enemy.GetComponent<PlayerBase>();
             if (enemyBase != null)
             {
                 enemyBase.currentHealth = Mathf.Min(enemyBase.currentHealth + enemyStats.healAmount, enemyStats.maxhealth);
@@ -69,5 +69,11 @@ public class HealingEnemy : MonoBehaviour
             }
         }
         nextHealTime = Time.time + enemyStats.specialAbilityCooldown;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
 }

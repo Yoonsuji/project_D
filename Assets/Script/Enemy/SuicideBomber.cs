@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Dreamteck.Splines;
 
-
 public class SuicideBomber : MonoBehaviour
 {
     public EnemyStats enemyStats;

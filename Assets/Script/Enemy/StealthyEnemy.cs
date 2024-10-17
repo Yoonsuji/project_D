@@ -76,7 +76,7 @@ public class StealthyEnemy : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
+            PlayerBase playerComponent = player.GetComponent<PlayerBase>();
             if (playerComponent != null)
             {
                 playerComponent.TakeDamage(enemyStats.attackDamage);
@@ -102,7 +102,6 @@ public class StealthyEnemy : MonoBehaviour
         }
     }
 
-    // Makes the enemy semi-transparent
     private void StealthOn()
     {
         foreach (SpriteRenderer spriteRenderer in enemySpriteRenderers)
@@ -115,7 +114,6 @@ public class StealthyEnemy : MonoBehaviour
                 spriteRenderer.color = color;
             }
         }
-        Debug.Log($"{enemyStats.enemyName} has become partially transparent!");
     }
 
     private void StealthOff()
@@ -130,7 +128,6 @@ public class StealthyEnemy : MonoBehaviour
                 spriteRenderer.color = color;
             }
         }
-        Debug.Log($"{enemyStats.enemyName} is now fully opaque!");
     }
 
     private void OnDrawGizmos()

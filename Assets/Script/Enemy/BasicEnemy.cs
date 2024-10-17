@@ -70,12 +70,11 @@ public class BasicEnemy : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
+            PlayerBase playerComponent = player.GetComponent<PlayerBase>();
             if (playerComponent != null)
             {
                 playerComponent.TakeDamage(enemyStats.attackDamage);
                 animator.SetTrigger("Attack");
-                Debug.Log($"{enemyStats.enemyName} attacked {player.name} for {enemyStats.attackDamage} damage!");
                 nextAttackTime = Time.time + enemyStats.attackCooldown;
             }
         }

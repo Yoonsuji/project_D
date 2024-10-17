@@ -101,7 +101,7 @@ public class SniperEnemy : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
+            PlayerBase playerComponent = player.GetComponent<PlayerBase>();
             if (playerComponent != null)
             {
                 playerComponent.TakeDamage(enemyStats.attackDamage);

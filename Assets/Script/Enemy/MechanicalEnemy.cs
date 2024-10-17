@@ -9,8 +9,7 @@ public class MechanicalEnemy : MonoBehaviour
     private float nextAttackTime = 0f;
     private Animator animator;
 
-    // Define a list of allowed objects that can damage the enemy
-    public List<string> allowedDamageSources; // Add tags/names of objects that can damage this enemy
+    public List<string> allowedDamageSources;
 
     private void Start()
     {
@@ -72,7 +71,7 @@ public class MechanicalEnemy : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
+            PlayerBase playerComponent = player.GetComponent<PlayerBase>();
             if (playerComponent != null)
             {
                 if (IsAllowedDamageSource(playerComponent))
@@ -81,19 +80,13 @@ public class MechanicalEnemy : MonoBehaviour
                     animator.SetTrigger("Attack");
                     Debug.Log($"{enemyStats.enemyName} attacked {player.name} for {enemyStats.attackDamage} damage!");
                 }
-                else
-                {
-                    Debug.Log("Attack ignored. This player cannot damage the MechanicalEnemy.");
-                }
                 nextAttackTime = Time.time + enemyStats.attackCooldown;
             }
         }
     }
 
-    // Check if the attacker is in the allowed list
-    private bool IsAllowedDamageSource(BasicPlayer player)
+    private bool IsAllowedDamageSource(PlayerBase player)
     {
-        // Assuming player has a tag or name to identify if it can damage this enemy
         return allowedDamageSources.Contains(player.gameObject.tag) || allowedDamageSources.Contains(player.gameObject.name);
     }
 

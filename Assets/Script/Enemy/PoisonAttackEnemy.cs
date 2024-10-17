@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class PoisonAttackEnemy : MonoBehaviour
 {
-    public EnemyStats enemyStats; // Reference to the enemy stats
-    public float detectionRadius = 5f; // Radius to detect players
-    public float poisonDamage = 5f; // Total damage to deal over time
-    public float poisonDuration = 2f; // Duration of the poison effect
-    public Color poisonColor = new Color(0.5f, 1f, 0.5f, 1f); // Poison-like color
+    public EnemyStats enemyStats;
+    public float detectionRadius = 5f;
+    public float poisonDamage = 5f;
+    public float poisonDuration = 2f;
+    public Color poisonColor = new Color(0.5f, 1f, 0.5f, 1f);
 
-    private List<Transform> players; // List of players detected
-    private float nextAttackTime = 0f; // Time until the next attack
-    private Animator animator; // Animator for attack animations
+    private List<Transform> players;
+    private float nextAttackTime = 0f;
+    private Animator animator;
 
     private void Start()
     {
         FindPlayers();
-        animator = GetComponentInChildren<Animator>(); // Get Animator if needed
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -74,58 +74,49 @@ public class PoisonAttackEnemy : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
+            PlayerBase playerComponent = player.GetComponent<PlayerBase>();
             if (playerComponent != null)
             {
-                StartCoroutine(ApplyPoisonEffect(playerComponent)); // Start poison effect
-                animator.SetTrigger("Attack"); // Trigger attack animation
-                nextAttackTime = Time.time + enemyStats.attackCooldown; // Cooldown for next attack
+                StartCoroutine(ApplyPoisonEffect(playerComponent));
+                animator.SetTrigger("Attack");
+                nextAttackTime = Time.time + enemyStats.attackCooldown;
             }
         }
     }
 
-    private IEnumerator ApplyPoisonEffect(BasicPlayer player)
+    private IEnumerator ApplyPoisonEffect(PlayerBase player)
     {
-        // Get all SpriteRenderer components in the player's hierarchy
         SpriteRenderer[] playerSprites = player.GetComponentsInChildren<SpriteRenderer>();
         if (playerSprites.Length > 0)
         {
-            Color originalColor = playerSprites[0].color; // Store the original color of the first SpriteRenderer
+            Color originalColor = playerSprites[0].color;
 
-            // Calculate total damage as an integer
             int totalDamage = Mathf.FloorToInt(poisonDamage);
-            int damagePerSecond = Mathf.FloorToInt(totalDamage / poisonDuration); // Damage to apply each second
+            int damagePerSecond = Mathf.FloorToInt(totalDamage / poisonDuration);
 
-            float elapsedTime = 0f; // Track elapsed time
+            float elapsedTime = 0f;
 
             while (elapsedTime < poisonDuration)
             {
-                // Apply damage each second
                 player.TakeDamage(damagePerSecond);
 
-                // Interpolate the color based on remaining time
                 Color currentColor = Color.Lerp(poisonColor, originalColor, elapsedTime / poisonDuration);
 
-                // Apply the color change to all SpriteRenderer components
                 foreach (var playerSprite in playerSprites)
                 {
-                    playerSprite.color = currentColor; // Change to the current color
+                    playerSprite.color = currentColor;
                 }
 
-                // Wait for one second before applying the next damage
                 yield return new WaitForSeconds(1f);
-                elapsedTime += 1f; // Increment elapsed time by 1 second
+                elapsedTime += 1f;
             }
 
-            // Ensure the final color is reset to the original color for all sprites
             foreach (var playerSprite in playerSprites)
             {
-                playerSprite.color = originalColor; // Reset the player's color
+                playerSprite.color = originalColor;
             }
         }
     }
-
-
 
     private void OnDrawGizmos()
     {

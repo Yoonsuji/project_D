@@ -1165,7 +1165,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7898028386368035080}
   - component: {fileID: 8902626535407430052}
-  - component: {fileID: 4951538119079331688}
   m_Layer: 5
   m_Name: HPBar
   m_TagString: Untagged
@@ -1247,19 +1246,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4951538119079331688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3598434252271805770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fa00b91216e6f945b79926abd8ab057, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 8902626535407430052}
 --- !u!1 &3671022009787552655
 GameObject:
   m_ObjectHideFlags: 0

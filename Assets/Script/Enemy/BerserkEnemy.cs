@@ -78,7 +78,7 @@ public class BerserkerEnemy : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
+            EnemyBase playerComponent = player.GetComponent<EnemyBase>();
             if (playerComponent != null)
             {
                 int attackDamage = (int)enemyStats.attackDamage;

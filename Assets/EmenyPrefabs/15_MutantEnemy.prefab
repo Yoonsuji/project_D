@@ -85,7 +85,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5638110875815484177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3885,7 +3885,7 @@ RectTransform:
   - {fileID: 2306834059817840065}
   - {fileID: 5794775726621435394}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4129,7 +4129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3952359367557741374}
   - component: {fileID: 5807974481294029357}
-  - component: {fileID: 3782140407380864915}
   m_Layer: 5
   m_Name: HPBar
   m_TagString: Untagged
@@ -4211,19 +4210,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3782140407380864915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2513470799489421012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fa00b91216e6f945b79926abd8ab057, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 5807974481294029357}
 --- !u!1 &2707361534482440771
 GameObject:
   m_ObjectHideFlags: 0

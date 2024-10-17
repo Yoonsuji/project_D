@@ -1547,8 +1547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e6f6a608fb12842a8cbdda9e2406a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyStats: {fileID: 0}
-  detectionRadius: 5
+  enemyStats: {fileID: 11400000, guid: 7d8b9324d4efea644804fabb8cf76eb5, type: 2}
+  detectionRadius: 1
   enemies: []
 --- !u!1 &365336980015615350
 GameObject:
@@ -4053,7 +4053,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2591285131499678466}
   - component: {fileID: 5132971918105921664}
-  - component: {fileID: 2299017042388976916}
   m_Layer: 5
   m_Name: HPBar
   m_TagString: Untagged
@@ -4135,19 +4134,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2299017042388976916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1656172857139652652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fa00b91216e6f945b79926abd8ab057, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 5132971918105921664}
 --- !u!1 &3519655492275806029
 GameObject:
   m_ObjectHideFlags: 0

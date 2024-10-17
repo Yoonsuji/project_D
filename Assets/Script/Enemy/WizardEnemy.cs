@@ -74,18 +74,14 @@ public class WizardEnemy : MonoBehaviour
         {
             if (spellParticle != null)
             {
-                // Set the position and direction of the particle system
                 spellParticle.transform.position = transform.position;
                 Vector3 direction = (player.position - transform.position).normalized;
 
-                // Orient the particle system in the direction of the player
                 Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction);
                 spellParticle.transform.rotation = rotation;
 
-                // Play the particle system as the spell
                 spellParticle.Play();
 
-                // Trigger animation
                 animator.SetFloat("AttackState", 0.5f);
                 animator.SetBool("Attack", true);
             }
@@ -103,7 +99,7 @@ public class WizardEnemy : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
+            PlayerBase playerComponent = player.GetComponent<PlayerBase>();
             if (playerComponent != null)
             {
                 playerComponent.TakeDamage(enemyStats.attackDamage);

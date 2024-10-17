@@ -19,7 +19,6 @@ public class SummonerEnemy : MonoBehaviour
         FindPlayers();
         animator = gameObject.GetComponentInChildren<Animator>();
 
-        // Set the initial summon time to 1 second from the start
         nextSummonTime = Time.time + 1f;
     }
 
@@ -40,13 +39,11 @@ public class SummonerEnemy : MonoBehaviour
             }
         }
 
-        // Execute the summon skill if it's time
         if (Time.time >= nextSummonTime)
         {
             ExecuteSummonSkill();
         }
 
-        // Clean up any destroyed units from the list
         summonedUnits.RemoveAll(unit => unit == null);
     }
 
@@ -84,39 +81,33 @@ public class SummonerEnemy : MonoBehaviour
 
     private void ExecuteSummonSkill()
     {
-        if (CountActiveSummonedUnits() < 3) // Ensure only 3 units can be summoned
+        if (CountActiveSummonedUnits() < 3)
         {
             GameObject summonedUnit = Instantiate(summonPrefab, transform.position + Vector3.right * 0.5f, Quaternion.identity);
 
-            // Scale the summoned unit to 0.5
             summonedUnit.transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
 
             summonedUnits.Add(summonedUnit);
 
-            Debug.Log($"{enemyStats.enemyName} summoned a unit!");
-
-            // Set the next summon time
-            nextSummonTime = Time.time + 0.5f; // Delay of 0.5 seconds between subsequent summons
+            nextSummonTime = Time.time + 0.5f;
         }
     }
 
     private int CountActiveSummonedUnits()
     {
-        // Return the count of active summoned units
         return summonedUnits.Count;
     }
 
     private void AttackPlayer(Transform player)
     {
-        if (Time.time >= nextAttackTime) // Check if the attack cooldown has passed
+        if (Time.time >= nextAttackTime)
         {
-            BasicPlayer playerComponent = player.GetComponent<BasicPlayer>();
+            PlayerBase playerComponent = player.GetComponent<PlayerBase>();
             if (playerComponent != null)
             {
-                playerComponent.TakeDamage(enemyStats.attackDamage); // Deal damage to the player
-                animator.SetTrigger("Attack"); // Trigger the attack animation
-                Debug.Log($"{enemyStats.enemyName} attacked {player.name} for {enemyStats.attackDamage} damage!");
-                nextAttackTime = Time.time + enemyStats.attackCooldown; // Set the next attack time
+                playerComponent.TakeDamage(enemyStats.attackDamage);
+                animator.SetTrigger("Attack");
+                nextAttackTime = Time.time + enemyStats.attackCooldown;
             }
         }
     }
