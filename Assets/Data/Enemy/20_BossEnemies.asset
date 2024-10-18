@@ -13,18 +13,15 @@ MonoBehaviour:
   m_Name: 20_BossEnemies
   m_EditorClassIdentifier: 
   enemyName: StaminaSharingEnemy
-  maxhealth: 500
-  attackDamage: 30
+  maxhealth: 100
+  attackDamage: 10
   attackRange: 0
   type: 19
-  moveSpeed: 0.2
-  attackCooldown: 10
+  moveSpeed: 0.0000061035157
+  attackCooldown: 2
   specialAbilityCooldown: 0
   specialAbilityDuration: 0
   healAmount: 0
   explosionDamage: 0
   poisonDamage: 0
   poisonDuration: 0
-  mutationTime: 0
-  reinforcementBonus: 0
-  undergroundSpeed: 0

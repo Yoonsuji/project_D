@@ -25,8 +25,5 @@ public class EnemyStats : ScriptableObject
     public float explosionDamage;
     public float poisonDamage;
     public float poisonDuration;
-    public float mutationTime;
-    public float reinforcementBonus;
-    public float undergroundSpeed;
 
 }

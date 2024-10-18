@@ -6,6 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/WinStage1.unity
+    guid: 6c31381c0d176e64c9fb5d0bad01c0ac
+  - enabled: 1
+    path: Assets/Scenes/WinStage2.unity
+    guid: 929d178f7f73a0b4ab03c2e1b6607156
+  - enabled: 1
+    path: Assets/Scenes/WinStage3.unity
+    guid: 3d9d90a98c1c9d947b8b425a97d77de2
+  - enabled: 1
+    path: Assets/Scenes/WinStage4.unity
+    guid: 963df32ef988ef7408dea59bd6b68e3c
+  - enabled: 1
+    path: Assets/Scenes/WinStage5.unity
+    guid: a08b038fac5e55b4d8f83c93176925b0
+  - enabled: 1
     path: Assets/Scenes/GameStage1.unity
+    guid: 7639ba119a1d21b488b6b840204092cf
+  - enabled: 1
+    path: Assets/Scenes/GameStage2.unity
+    guid: c21a7edd86abc92408fc240e92fd1f17
+  - enabled: 1
+    path: Assets/Scenes/GameStage3.unity
+    guid: 289a0d94ae2a62b409593aad9c19f550
+  - enabled: 1
+    path: Assets/Scenes/GameStage4.unity
+    guid: fbbc607bb8550d34f88486161da2af3f
+  - enabled: 1
+    path: Assets/Scenes/GameStage5.unity
+    guid: bee01fe1dd9eddf4c9e376f5614123b5
+  - enabled: 1
+    path: Assets/Scenes/GameStage6.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
